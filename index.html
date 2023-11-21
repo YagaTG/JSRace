@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JRPG Race</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="race.js"></script>
+  </head>
+
+  <body>
+    <audio id="audio" src="music/PixelTown.mp3" loop="true"></audio>
+    <div class="menu">
+      <h1 class="menu__name">JRPG RACE 2.0</h1>
+      <button value="PLAY" onclick="play()" class="menu__btn_play">
+        Play!
+      </button>
+      <h2 class="menu__heading">
+        Difficult: <span class="menu__heading menu__difficult"></span>
+      </h2>
+      <h2 class="menu__heading">Balance :</h2>
+
+      <a href="https://www.twitch.tv/yaga_tg" target="_blank" class="menu__link"
+        >twitch.tv/yaga_tg</a
+      >
+      <a
+        href="https://www.youtube.com/channel/UC6xAE-SckKiyoGj_G9oQDYw"
+        target="_blank"
+        class="menu__link yt"
+        >youtube.com/yaga_tg</a
+      >
+      <button class="menu__btn menu__btn_shop">SHOP</button>
+      <button class="menu__btn menu__btn_recordTable">RECORDS</button>
+    </div>
+
+    <div class="shop">
+      <div class="shop__heading">Shop</div>
+      <div class="shop__items">
+        <div class="shop__item" id="skin0"><div class="marked"></div></div>
+        <div class="shop__item" id="skin1"></div>
+        <div class="shop__item" id="skin2"></div>
+        <div class="shop__item" id="skin3"></div>
+      </div>
+      <button class="shop__btn">Back</button>
+    </div>
+
+    <!-- <div class="recordboard">
+      <h1 class="recordboard__heading">Record:</h1>
+      <span class="recordboard__score"> 0</span>
+    </div> -->
+
+    <div class="scoreboard">
+      <h1 class="scoreboard__heading">Score:</h1>
+      <span class="scoreboard__score"> 0</span>
+    </div>
+
+    <div class="music">
+      <div class="music__img" src="img/logoForMusic.png"></div>
+    </div>
+
+    <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.volume = 0.03;
+        audio.play();
+      }
+    </script>
+
+    <div class="coinboard">
+      <h1 class="coinboard__heading"></h1>
+      <span class="coinboard__coin">0</span>
+    </div>
+
+    <div class="defeat">
+      <div class="defeat__container">
+        <h1 class="defeat__heading">Game Over!</h1>
+        <form class="testClass">
+          <button class="defeat__btn">Again</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="road__container">
+      <div class="road__img"></div>
+    </div>
+
+    <div class="qte">
+      <h1 class="qte__heading">Press F to turn!</h1>
+    </div>
+
+    <div class="multy__container">
+      <div class="multy__icon"></div>
+      <div class="multy__bar">
+        <div class="multy__bar_time"></div>
+      </div>
+    </div>
+
+    <div class="difficult__container">
+      <div class="difficult__menu">
+        <div class="difficult__heading">Choose your difficult</div>
+        <ul class="difficult__list">
+          <li class="difficult__item" data-diff="easy">Easy</li>
+          <li class="difficult__item" data-diff="normal">Normal</li>
+          <li class="difficult__item" data-diff="hard">Hard</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="record__container">
+      <div class="record__header">RECORDS:</div>
+      <ul class="record__list">
+        <li class="record__item">
+          <div class="record__col col-num">1</div>
+          <div class="record__col col-name">yaga_tg</div>
+          <div class="record__col col-score"></div>
+        </li>
+        <li class="record__item">
+          <div class="record__col col-num">2</div>
+          <div class="record__col col-name"></div>
+          <div class="record__col col-score"></div>
+        </li>
+        <li class="record__item">
+          <div class="record__col col-num">3</div>
+          <div class="record__col col-name"></div>
+          <div class="record__col col-score"></div>
+        </li>
+        <li class="record__item">
+          <div class="record__col col-num">4</div>
+          <div class="record__col col-name"></div>
+          <div class="record__col col-score"></div>
+        </li>
+        <li class="record__item">
+          <div class="record__col col-num">5</div>
+          <div class="record__col col-name"></div>
+          <div class="record__col col-score"></div>
+        </li>
+      </ul>
+      <button class="record__btn">Back</button>
+    </div>
+
+    <div class="new-record">
+      <div class="new-record__container">
+        <h2 class="new-record__title">NEW RECORD!</h2>
+        <input type="text" class="new-record__input" />
+        <button class="new-record__btn">SUBMIT</button>
+      </div>
+    </div>
+  </body>
+</html>
